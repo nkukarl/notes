@@ -29,5 +29,34 @@ output:
 
 Both idioms can be mixed with normal arguments to allow a set of fixed and some variable arguments:
 ```
-def 
+def foo(*args, **kwargs):
+    print args
+    print kwargs
+
+fop(1, 2, 3, a=4, b=5, c=6)
 ```
+output:
+```
+(1, 2, 3)
+{a=1, b=2, c=3}
+```
+
+*NOTE* `foo(1, 2, a=4, 3, b=5, c=6)` would cause a syntax error `SyntaxError: non-keyword arg after keyword arg`
+
+Another usage of `*` is to unpack argument list when calling a function
+
+```
+def foo(a, b):
+    print a
+    print b
+
+c = [1, 2]
+foo(*c)
+```
+output:
+```
+1
+2
+```
+
+Source: [Stackoverflow](http://stackoverflow.com/questions/36901/what-does-double-star-and-star-do-for-python-parameters)
