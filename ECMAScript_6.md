@@ -90,7 +90,7 @@ console.log('Hi, my name is ' + name + ' and I am ' + age + ' years old.');
 ```
 Now:
 ```javascript
-console.log('Hi, my name is ${name} and I am ${age} years old.');
+console.log(`Hi, my name is ${name} and I am ${age} years old.`);
 ```
 
 ###Add line break
